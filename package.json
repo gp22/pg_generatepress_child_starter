@@ -1,0 +1,42 @@
+{
+		"name": "GeneratePressChild",
+		"version": "1.0.0",
+		"description": "GeneratePress Child",
+		"scripts": {
+				"start": "gulp",
+				"build": "gulp build --prod"
+		},
+		"repository": {
+				"type": "git",
+				"url": "git+https://github.com/gp22/pg_generatepress_child_starter.git"
+		},
+		"keywords": [],
+		"author": "",
+		"license": "GPL-2.0-or-later",
+		"devDependencies": {
+				"@babel/core": "^7.11.1",
+				"@babel/preset-env": "^7.11.0",
+				"@babel/register": "^7.10.5",
+				"autoprefixer": "^9.8.6",
+				"babel-loader": "^8.1.0",
+				"del": "^6.0.0",
+				"gulp": "^4.0.2",
+				"gulp-clean-css": "^4.3.0",
+				"gulp-cli": "^2.3.0",
+				"gulp-if": "^3.0.0",
+				"gulp-postcss": "^8.0.0",
+				"gulp-purgecss": "^2.3.0",
+				"gulp-sass": "^4.1.0",
+				"gulp-sourcemaps": "^2.6.5",
+				"gulp-uglify": "^3.0.2",
+				"purgecss-with-wordpress": "^2.3.0",
+				"vinyl-named": "^1.1.0",
+				"webpack-stream": "^6.1.0",
+				"yargs": "^15.4.1"
+		},
+		"dependencies": {},
+		"bugs": {
+				"url": "https://github.com/gp22/pg_generatepress_child_starter/issues"
+		},
+		"homepage": "https://github.com/gp22/pg_generatepress_child_starter#readme"
+}
