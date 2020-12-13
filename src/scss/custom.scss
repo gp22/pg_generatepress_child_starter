@@ -1,0 +1,43 @@
+/* Generatepress theme customizations
+--------------------------------------------- */
+a {
+  text-decoration: underline;
+}
+
+/* Footer
+--------------------------------------------- */
+footer {
+  &.site-info,
+  &.site-info a {
+    background-color: transparent;
+    color: inherit;
+  }
+
+  .footer-widgets-container {
+    padding: 0;
+  }
+
+  .inside-site-info {
+    flex-direction: column;
+  }
+
+  .copyright-bar {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  ul.menu {
+    display: flex;
+
+    .menu-item:not(:last-of-type) {
+      margin-right: .5em;
+    }
+
+    li {
+      margin-bottom: 0;
+    }
+  }
+
+}
