@@ -19,6 +19,8 @@ import uglify from "gulp-uglify";
 // let server = browserSync.create();
 const PROD = yargs.argv.prod;
 
+if (PROD) process.env.NODE_ENV = "production";
+
 let paths = {
 	styles: {
 		src: ["src/scss/style.scss" /* "src/scss/admin.scss" */],
@@ -79,7 +81,7 @@ export let styles = (done) => {
 			gulpif(
 				PROD,
 				purgecss({
-					content: ["**/*.html"],
+					content: ["**/*.php"],
 					whitelist: purgecssWordpress.whitelist,
 					whitelistPatterns: purgecssWordpress.whitelistPatterns,
 				})
