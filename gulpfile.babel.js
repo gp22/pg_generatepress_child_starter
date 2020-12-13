@@ -1,6 +1,7 @@
 import gulp from "gulp";
 import yargs from "yargs";
 import sass from "gulp-sass";
+import tailwindcss from "tailwindcss";
 import postcss from "gulp-postcss";
 import autoprefixer from "autoprefixer";
 import sourcemaps from "gulp-sourcemaps";
@@ -84,6 +85,7 @@ export let styles = (done) => {
 				})
 			)
 		)
+		.pipe(postcss([tailwindcss()]))
 		.pipe(gulpif(PROD, postcss([autoprefixer()])))
 		.pipe(gulpif(PROD, cleanCss({ compatibility: "*" }))) // default ie10 compatibility: https://www.npmjs.com/package/clean-css#compatibility-modes
 		.pipe(gulpif(!PROD, sourcemaps.write()))
@@ -104,13 +106,14 @@ export let styles = (done) => {
 // 	return gulp.src(paths.other.src).pipe(gulp.dest(paths.other.dest));
 // };
 
-export let watch = () => {
+export let watch = (done) => {
 	gulp.watch("src/**/*.scss", styles);
 	// gulp.watch("src/js/**/*.js", scripts);
 	// gulp.watch("src/js/**/*.js", gulp.series(scripts, reload));
 	// gulp.watch("**/*.php", reload);
 	// gulp.watch(paths.images.src, gulp.series(images, reload));
 	// gulp.watch(paths.other.src, gulp.series(copy, reload));
+	done();
 };
 
 export let scripts = () => {
