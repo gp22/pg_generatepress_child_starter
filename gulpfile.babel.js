@@ -6,8 +6,8 @@ import postcss from "gulp-postcss";
 import autoprefixer from "autoprefixer";
 import sourcemaps from "gulp-sourcemaps";
 import cleanCss from "gulp-clean-css";
-import purgecss from "gulp-purgecss";
-import purgecssWordpress from "purgecss-with-wordpress";
+// import purgecss from "gulp-purgecss";
+// import purgecssWordpress from "purgecss-with-wordpress";
 import gulpif from "gulp-if";
 import named from "vinyl-named";
 // import imagemin from "gulp-imagemin";
@@ -77,16 +77,16 @@ export let styles = (done) => {
 		.src(paths.styles.src)
 		.pipe(gulpif(!PROD, sourcemaps.init()))
 		.pipe(sass().on("error", sass.logError))
-		.pipe(
-			gulpif(
-				PROD,
-				purgecss({
-					content: ["**/*.php"],
-					whitelist: purgecssWordpress.whitelist,
-					whitelistPatterns: purgecssWordpress.whitelistPatterns,
-				})
-			)
-		)
+		// .pipe(
+		// 	gulpif(
+		// 		PROD,
+		// 		purgecss({
+		// 			content: ["**/*.php"],
+		// 			whitelist: purgecssWordpress.whitelist,
+		// 			whitelistPatterns: purgecssWordpress.whitelistPatterns,
+		// 		})
+		// 	)
+		// )
 		.pipe(postcss([tailwindcss()]))
 		.pipe(gulpif(PROD, postcss([autoprefixer()])))
 		.pipe(gulpif(PROD, cleanCss({ compatibility: "*" }))) // default ie10 compatibility: https://www.npmjs.com/package/clean-css#compatibility-modes
@@ -118,34 +118,34 @@ export let watch = (done) => {
 	done();
 };
 
-export let scripts = () => {
-	return gulp
-		.src(paths.scripts.src)
-		.pipe(named())
-		.pipe(
-			webpack({
-				module: {
-					rules: [
-						{
-							test: /\.js$/,
-							use: {
-								loader: "babel-loader",
-								options: {
-									presets: ["@babel/preset-env"],
-								},
-							},
-						},
-					],
-				},
-				output: {
-					filename: "[name].js",
-				},
-				devtool: !PROD ? "inline-source-map" : false,
-			})
-		)
-		.pipe(gulpif(PROD, uglify()))
-		.pipe(gulp.dest(paths.scripts.dest));
-};
+// export let scripts = () => {
+// 	return gulp
+// 		.src(paths.scripts.src)
+// 		.pipe(named())
+// 		.pipe(
+// 			webpack({
+// 				module: {
+// 					rules: [
+// 						{
+// 							test: /\.js$/,
+// 							use: {
+// 								loader: "babel-loader",
+// 								options: {
+// 									presets: ["@babel/preset-env"],
+// 								},
+// 							},
+// 						},
+// 					],
+// 				},
+// 				output: {
+// 					filename: "[name].js",
+// 				},
+// 				devtool: !PROD ? "inline-source-map" : false,
+// 			})
+// 		)
+// 		.pipe(gulpif(PROD, uglify()))
+// 		.pipe(gulp.dest(paths.scripts.dest));
+// };
 
 export let dev = gulp.series(
 	clean,
