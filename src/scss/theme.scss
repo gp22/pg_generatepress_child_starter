@@ -17,22 +17,6 @@
   box-shadow: 0 1rem 3rem rgba(0,0,0,.175);
 }
 
-/* Tracking
---------------------------------------------- */
-$tracking-tight:   -0.025em;
-$tracking-tighter: -0.05em;
-$tracking-wide:     0.025em;
-$tracking-wider:    0.05em;
-$tracking-widest:   0.1em;
-
-.tracking-wider {
-  letter-spacing: $tracking-wider;
-}
-
-.tracking-widest {
-  letter-spacing: $tracking-widest;
-}
-
 /* Typography
 --------------------------------------------- */
 $font-size-base: 1rem;
@@ -70,10 +54,9 @@ $display4-size: $font-size-base * 3.247;
   font-size: $display4-size;
 }
 
-.text-opacity-75 {
-  opacity: 0.75;
-}
-
-.uppercase {
-  text-transform: uppercase;
+/* Front page
+--------------------------------------------- */
+.headshot {
+  height: 180px;
+  width: 180px;
 }
