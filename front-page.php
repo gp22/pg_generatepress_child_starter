@@ -26,15 +26,20 @@ get_header(); ?>
 
 			<header class="inside-page-header my-0 py-12 md:py-20 lg:py-28">
 
-				<div class="md:max-w-xl">
-					<h1 class="">Does your website create solutions and peace of mind — or pain and frustration?</h1>
-					<p>👋
-						<span class="text-opacity-75">
-							Hi, I'm Paul. I can help you build trust, and achieve your business goals with exceptional website design and strategy.
-						</span>
-					</p>
-					<a href="" class="font-bold tracking-wider py-3 px-7 text-white uppercase bg-blue-500 inline-block">Get In Touch!</a>
-				</div>
+				<?php $hero = get_field('hero');
+				if( $hero ): ?>
+
+					<div class="md:max-w-xl">
+						<h1 class=""><?php echo $hero['heading']; ?></h1>
+						<p><?php echo $hero['subhead_emoji']; ?>
+							<span class="opacity-75"><?php echo $hero['subhead']; ?></span>
+						</p>
+						<a href="<?php echo $hero['button_link']; ?>" class="font-bold tracking-wider py-3 px-7 text-white uppercase bg-blue-500 inline-block">
+							<?php echo $hero['button_text']; ?>
+						</a>
+					</div>
+
+				<?php endif; ?>
 
 			</header>
 
@@ -43,12 +48,17 @@ get_header(); ?>
 				<section class="flex flex-wrap md:items-end">
 
 					<div class="md:w-8/12">
-						<h2>Lorem Ipsum</h2>
+						<h2 class="text-4xl">Lorem Ipsum</h2>
 						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
 					</div>
 
 					<div class="flex justify-end md:w-4/12">
-						<img class="transform -rotate-6 border-solid border-8 border-white shadow" src="https://via.placeholder.com/150" alt="">
+
+						<?php if( get_field('headshot') ):
+							$headshot = get_field('headshot'); ?>
+							<img class="headshot transform -rotate-6 border-solid border-8 border-white shadow" src="<?php echo esc_url($headshot['url']); ?>" alt="<?php echo esc_attr($headshot['alt']); ?>"/>
+						<?php endif; ?>
+
 					</div>
 
 				</section>
@@ -57,7 +67,7 @@ get_header(); ?>
 
 					<div>
 
-						<h2>Lorem Ipsum</h2>
+						<h2 class="text-4xl">Lorem Ipsum</h2>
 						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
 
 					</div>
