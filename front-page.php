@@ -45,32 +45,21 @@ get_header(); ?>
 
 			<article class="inside-article">
 
-				<section class="flex flex-wrap md:items-end">
+				<section class="flex flex-wrap md:items-center">
 
-					<div class="md:w-8/12">
-						<h2 class="text-4xl">Lorem Ipsum</h2>
-						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-					</div>
+					<?php $about_section = get_field('about_section');
+					if( $about_section ):	?>
 
-					<div class="flex justify-end md:w-4/12">
+						<div class="md:w-8/12">
+							<h2 class="text-4xl"><?php echo $about_section['heading']; ?></h2>
+							<p><?php echo $about_section['copy']; ?></p>
+						</div>
 
-						<?php if( get_field('headshot') ):
-							$headshot = get_field('headshot'); ?>
-							<img class="headshot transform -rotate-6 border-solid border-8 border-white shadow" src="<?php echo esc_url($headshot['url']); ?>" alt="<?php echo esc_attr($headshot['alt']); ?>"/>
-						<?php endif; ?>
+						<div class="flex justify-end md:w-4/12">
+							<img class="headshot transform -rotate-6 border-solid border-8 border-white shadow" src="<?php echo esc_url($about_section['headshot']['url']); ?>" alt="<?php echo esc_attr($about_section['headshot']['alt']); ?>"/>
+						</div>
 
-					</div>
-
-				</section>
-
-				<section>
-
-					<div>
-
-						<h2 class="text-4xl">Lorem Ipsum</h2>
-						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-
-					</div>
+					<?php endif; ?>
 
 				</section>
 
