@@ -60,3 +60,21 @@ $display4-size: $font-size-base * 3.247;
   height: 220px;
   width: 220px;
 }
+
+.headshot-testimonial {
+  height: 140px;
+  width: 140px;
+}
+
+
+/* Quotes
+--------------------------------------------- */
+q:before {
+  content: open-quote;
+  left: 0.5em;
+  position: absolute;
+}
+
+q:after {
+  content: close-quote;
+}
