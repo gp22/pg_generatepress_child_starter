@@ -109,6 +109,28 @@ get_header(); ?>
 
 				</section>
 
+				<section class="mt-24 lg:mt-36">
+
+					<blockquote class="flex flex-wrap justify-center">
+
+						<?php $about_section = get_field('about_section');
+						if( $about_section ):	?>
+
+							<div class="md:w-9/12">
+								<p><q>Paul was a great find and quickly became our top go-to developer. As long as you don’t give him so much work that he doesn’t have time for us, he gets my highest recommendation.</q></p>
+								<figcaption class="font-bold opacity-75">—Chris Handsel, <cite>Principal Solutions Consulting</cite></figcaption>
+							</div>
+
+							<div class="flex mt-6 md:items-center md:justify-end md:mt-0 md:w-3/12">
+								<img class="headshot-testimonial rounded-full" src="<?php echo esc_url($about_section['headshot']['url']); ?>" alt="<?php echo esc_attr($about_section['headshot']['alt']); ?>"/>
+							</div>
+
+						<?php endif; ?>
+
+					</blockquote>
+
+				</section>
+
 			</article>
 
 			<?php
