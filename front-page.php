@@ -33,10 +33,10 @@ get_header(); ?>
 
 			?>
 
-			<header class="inside-page-header my-0 py-12 md:py-20 md:py-28">
+			<?php $hero = get_field('hero');
+			if( $hero ): ?>
 
-				<?php $hero = get_field('hero');
-				if( $hero ): ?>
+				<header class="inside-page-header my-0 py-12 md:py-20 md:py-28">
 
 					<div class="md:max-w-xl">
 						<h1 class="lg:text-display-1"><?php echo $hero['heading']; ?></h1>
@@ -48,16 +48,16 @@ get_header(); ?>
 						</a>
 					</div>
 
-				<?php endif; ?>
+				</header>
 
-			</header>
+			<?php endif; ?>
 
 			<article class="inside-article">
 
-				<section class="flex flex-wrap md:items-center">
+				<?php $about_section = get_field('about_section');
+				if( $about_section ):	?>
 
-					<?php $about_section = get_field('about_section');
-					if( $about_section ):	?>
+					<section class="flex flex-wrap md:items-center">
 
 						<div class="md:w-7/12">
 							<h2 class="text-2xl"><?php echo $about_section['heading']; ?></h2>
@@ -68,14 +68,14 @@ get_header(); ?>
 							<img class="headshot border-solid border-8 border-white shadow" src="<?php echo esc_url($about_section['headshot']['url']); ?>" alt="<?php echo esc_attr($about_section['headshot']['alt']); ?>"/>
 						</div>
 
-					<?php endif; ?>
+					</section>
 
-				</section>
+				<?php endif; ?>
 
-				<section class="mt-24 md:mt-36">
+				<?php $feature_section = get_field('feature_section');
+				if( $feature_section ):	?>
 
-					<?php $feature_section = get_field('feature_section');
-					if( $feature_section ):	?>
+					<section class="mt-24 md:mt-36">
 
 						<div class="flex flex-wrap items-center">
 
@@ -114,16 +114,16 @@ get_header(); ?>
 
 						</div>
 
-					<?php endif; ?>
+					</section>
 
-				</section>
+				<?php endif; ?>
 
-				<section class="mt-24 md:mt-36">
+				<?php $testimonial = get_field('testimonial');
+				if( $testimonial ):	?>
 
-					<blockquote class="flex flex-wrap justify-center">
+					<section class="mt-24 md:mt-36">
 
-						<?php $testimonial = get_field('testimonial');
-						if( $testimonial ):	?>
+						<blockquote class="flex flex-wrap justify-center">
 
 							<div class="md:w-9/12">
 								<p><q><?php echo $testimonial['quote']; ?></q></p>
@@ -134,11 +134,11 @@ get_header(); ?>
 								<img class="headshot-testimonial rounded-full" src="<?php echo esc_url($testimonial['headshot']['url']); ?>" alt="<?php echo esc_attr($testimonial['headshot']['alt']); ?>"/>
 							</div>
 
-						<?php endif; ?>
+						</blockquote>
 
-					</blockquote>
+					</section>
 
-				</section>
+				<?php endif; ?>
 
 				<section class="mt-24 md:text-center md:mt-36">
 
