@@ -131,6 +131,18 @@ get_header(); ?>
 
 				</section>
 
+				<section class="mt-24 md:text-center lg:mt-36">
+
+					<h2 class="text-4xl">Ready to Chat?</h2>
+
+					<p class="text-lg">Want to discuss your next website project or just have questions?</p>
+
+					<a href="<?php echo $hero['button_link']; ?>" class="font-bold tracking-wider py-3 px-7 text-white uppercase bg-blue-500 inline-block">
+						<?php echo $hero['button_text']; ?>
+					</a>
+
+				</section>
+
 			</article>
 
 			<?php
