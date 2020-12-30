@@ -10,6 +10,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
+/**
+ * Add CSS classes to body element.
+ */
+add_filter( 'body_class', function( $classes ) {
+
+	return array_merge( $classes, array( 'bg-gradient-to-b', 'from-gray-100', 'to-white' ) );
+
+} );
+
 get_header(); ?>
 
 	<div id="primary" <?php generate_do_element_classes( 'content' ); ?>>
@@ -30,11 +39,11 @@ get_header(); ?>
 				if( $hero ): ?>
 
 					<div class="md:max-w-xl">
-						<h1 class=""><?php echo $hero['heading']; ?></h1>
+						<h1 class="lg:text-display-1"><?php echo $hero['heading']; ?></h1>
 						<p><?php echo $hero['subhead_emoji']; ?>
 							<span class="opacity-75"><?php echo $hero['subhead']; ?></span>
 						</p>
-						<a href="<?php echo $hero['button_link']; ?>" class="font-bold tracking-wider py-3 px-7 text-white uppercase bg-blue-500 inline-block">
+						<a href="<?php echo $hero['button_link']; ?>" class="font-bold tracking-wider py-3 px-7 text-white uppercase bg-violet-500 inline-block">
 							<?php echo $hero['button_text']; ?>
 						</a>
 					</div>
@@ -51,7 +60,7 @@ get_header(); ?>
 					if( $about_section ):	?>
 
 						<div class="md:w-7/12">
-							<h2 class="text-4xl"><?php echo $about_section['heading']; ?></h2>
+							<h2 class="text-2xl"><?php echo $about_section['heading']; ?></h2>
 							<?php echo $about_section['copy']; ?>
 						</div>
 
@@ -133,11 +142,11 @@ get_header(); ?>
 
 				<section class="mt-24 md:text-center md:mt-36">
 
-					<h2 class="text-4xl">Ready to Chat?</h2>
+					<h2 class="text-2xl">Ready to Chat?</h2>
 
 					<p class="text-lg">Want to discuss your next website project or just have questions?</p>
 
-					<a href="<?php echo $hero['button_link']; ?>" class="font-bold tracking-wider py-3 px-7 text-white uppercase bg-blue-500 inline-block">
+					<a href="<?php echo $hero['button_link']; ?>" class="font-bold tracking-wider py-3 px-7 text-white uppercase bg-violet-500 inline-block">
 						<?php echo $hero['button_text']; ?>
 					</a>
 
