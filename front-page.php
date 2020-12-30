@@ -24,7 +24,7 @@ get_header(); ?>
 
 			?>
 
-			<header class="inside-page-header my-0 py-12 md:py-20 lg:py-28">
+			<header class="inside-page-header my-0 py-12 md:py-20 md:py-28">
 
 				<?php $hero = get_field('hero');
 				if( $hero ): ?>
@@ -63,7 +63,7 @@ get_header(); ?>
 
 				</section>
 
-				<section class="mt-24 lg:mt-36">
+				<section class="mt-24 md:mt-36">
 
 					<?php $feature_section = get_field('feature_section');
 					if( $feature_section ):	?>
@@ -109,7 +109,7 @@ get_header(); ?>
 
 				</section>
 
-				<section class="mt-24 lg:mt-36">
+				<section class="mt-24 md:mt-36">
 
 					<blockquote class="flex flex-wrap justify-center">
 
@@ -131,7 +131,7 @@ get_header(); ?>
 
 				</section>
 
-				<section class="mt-24 md:text-center lg:mt-36">
+				<section class="mt-24 md:text-center md:mt-36">
 
 					<h2 class="text-4xl">Ready to Chat?</h2>
 
