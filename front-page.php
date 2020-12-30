@@ -38,7 +38,7 @@ get_header(); ?>
 
 				<header class="inside-page-header my-0 py-12 md:py-20 md:py-28">
 
-					<div class="md:max-w-xl">
+					<div class="md:max-w-xl lg:max-w-2xl">
 						<h1 class="lg:text-display-1"><?php echo $hero['heading']; ?></h1>
 						<p><?php echo $hero['subhead_emoji']; ?>
 							<span class="opacity-75"><?php echo $hero['subhead']; ?></span>
@@ -140,7 +140,7 @@ get_header(); ?>
 
 				<?php endif; ?>
 
-				<section class="mt-24 md:text-center md:mt-36">
+				<section class="my-24 md:text-center md:my-36">
 
 					<h2 class="text-2xl">Ready to Chat?</h2>
 
