@@ -74,34 +74,34 @@ get_header(); ?>
 								<img src="<?php echo esc_url($feature_section['feature_image']['url']); ?>" alt="<?php echo esc_attr($feature_section['feature_image']['alt']); ?>">
 							</div>
 
-							<div class="md:w-1/2">
+							<ul class="m-0 md:w-1/2">
 
-								<div>
+								<li>
 									<h3 class="mb-2 text-base">
 										Strategy & Collaboration
 									</h3>
 									<p class="mb-10 text-sm opacity-75">Your project will be broken into distinct phases with plenty of positive collaboration along the way. You’ll be an active participant in the process!</p>
-								</div>
-								<div>
+								</li>
+								<li>
 									<h3 class="mb-2 text-base">
 										Training & Documentation
 									</h3>
 									<p class="mb-10 text-sm opacity-75">Before your website is finished you’ll get a personal training session to learn how to use it. You’ll get comfortable navigating it, adding content, and maintaining it.</p>
-								</div>
-								<div>
+								</li>
+								<li>
 									<h3 class="mb-2 text-base">
 										Design & Development
 									</h3>
 									<p class="mb-10 text-sm opacity-75">Your website will look modern and make an impression. And, as a developer, I put my years of experience into writing clean code that's easy to maintain, no matter who works on it in the future.</p>
-								</div>
-								<div>
+								</li>
+								<li>
 									<h3 class="mb-2 text-base">
 										Mobile Friendly
 									</h3>
 									<p class="mb-0 text-sm opacity-75">Your website will work and look great on every device. Your visitors will get what they expect whether they’re visiting on a phone, laptop or a large desktop monitor.</p>
-								</div>
+								</li>
 
-							</div>
+							</ul>
 
 						</div>
 
