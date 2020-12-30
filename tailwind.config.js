@@ -28,22 +28,32 @@ module.exports = {
 				800: "#49494b",
 				900: "#313132",
 			},
+			green: {
+				500: "#64f000",
+			},
+			orange: {
+				500: "#ff8300", // extra color 2
+			},
+			red: {
+				500: "#f30041", // extra color 1
+			},
+			violet: {
+				500: "#320ad8", // action
+			},
+			yellow: {
+				500: "#ffcf00", // extra color 3
+			},
 		},
 		fontSize: {
-			tiny: ".555rem",
-			xs: ".702rem",
-			sm: ".889rem",
+			xs: ".694rem",
+			sm: ".833rem",
 			base: "1rem",
-			lg: "1.125rem",
-			xl: "1.266rem",
-			"2xl": "1.424rem",
-			"3xl": "1.602rem",
-			"4xl": "1.802rem",
-			"5xl": "2.027rem",
-			"6xl": "2.281rem",
-			"7xl": "3.247rem",
-			"8xl": "3.653rem",
-			"9xl": "4.11rem",
+			lg: "1.2rem",
+			xl: "1.44rem",
+			"2xl": "1.728rem",
+			"3xl": "2.074rem",
+			"4xl": "2.488rem",
+			"display-1": "2.986rem",
 		},
 		extend: {},
 	},
