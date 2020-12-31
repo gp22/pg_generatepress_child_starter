@@ -1,10 +1,14 @@
-/* Theme customizations
- * all style overrides should go here
+// Theme customizations. This is where you add/modify rules
+// which are vendor related (eg. Generatepress, WPForms, etc.)
+
+/* Links
 --------------------------------------------- */
 a {
   text-decoration: underline;
 }
 
+/* Lists
+--------------------------------------------- */
 ul {
   list-style: none;
 }
