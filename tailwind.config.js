@@ -56,6 +56,11 @@ module.exports = {
 			"display-1": "2.986rem",
 		},
 		extend: {},
+		screens: {
+			// adjusted to match the generatepress breakpoints
+			md: "769px",
+			lg: "1025px",
+		},
 	},
 	corePlugins: {
 		// disable container so it doesn't conflict with the generatepress container
