@@ -20,12 +20,17 @@ if ( 'full-width' !== generate_get_option( 'footer_inner_width' ) ) {
 
 		<?php generate_do_site_logo(); ?>
 
-		<div class="copyright-bar">
+		<div class="flex flex-col text-sm w-full md:flex-row">
 
-			<div class="copyright">©<?php echo date("Y"); ?> paulgarcia.co</div>
+			<div class="copyright opacity-50">©<?php echo date("Y"); ?> paulgarcia.co</div>
 
-			<?php generate_construct_footer_widgets(); ?>
+			<div class="flex flex-auto justify-center md:justify-end">
 
+				<a href="/privacy-policy" class="pr-3 border border-solid border-gray-200 border-b-0 border-t-0 border-l-0">Privacy</a>
+				<a href="/terms-of-service" class="px-3 border border-solid border-gray-200 border-b-0 border-t-0 border-l-0">Terms</a>
+				<a href="/accessibility-statement" class="pl-3">Accessibility</a>
+
+			</div>
 		</div>
 
 	</div>
