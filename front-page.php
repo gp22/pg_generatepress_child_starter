@@ -65,7 +65,7 @@ get_header(); ?>
 						</div>
 
 						<div class="flex justify-end mt-6 transform -rotate-6 md:mt-0 md:w-5/12">
-							<img class="headshot border-solid border-8 border-white shadow" src="<?php echo esc_url($about_section['headshot']['url']); ?>" alt="<?php echo esc_attr($about_section['headshot']['alt']); ?>"/>
+							<img class="headshot border-solid border-8 border-white shadow-lg" src="<?php echo esc_url($about_section['headshot']['url']); ?>" alt="<?php echo esc_attr($about_section['headshot']['alt']); ?>"/>
 						</div>
 
 					</section>
