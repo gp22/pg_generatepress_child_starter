@@ -43,7 +43,7 @@ get_header(); ?>
 						<p><?php echo $hero['subhead_emoji']; ?>
 							<span class="opacity-75"><?php echo $hero['subhead']; ?></span>
 						</p>
-						<a href="<?php echo $hero['button_link']; ?>" class="font-bold tracking-wider py-3 px-7 text-white uppercase bg-violet-500 inline-block">
+						<a href="<?php echo $hero['button_link']; ?>" class="btn-primary">
 							<?php echo $hero['button_text']; ?>
 						</a>
 					</div>
@@ -146,7 +146,7 @@ get_header(); ?>
 
 					<p class="text-lg">Want to discuss your next website project or just have questions?</p>
 
-					<a href="<?php echo $hero['button_link']; ?>" class="font-bold tracking-wider py-3 px-7 text-white uppercase bg-violet-500 inline-block">
+					<a href="<?php echo $hero['button_link']; ?>" class="btn-primary">
 						<?php echo $hero['button_text']; ?>
 					</a>
 
