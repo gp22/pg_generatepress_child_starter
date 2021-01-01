@@ -26,6 +26,19 @@
 
 /* Front page
 --------------------------------------------- */
+header.site-header {
+  &:after {
+    background-image: url(top.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: "";
+    height: 200px;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+  }
+}
+
 .headshot {
   height: 220px;
   width: 220px;
@@ -34,6 +47,23 @@
 .headshot-testimonial {
   height: 140px;
   width: 140px;
+}
+
+/* Footer
+--------------------------------------------- */
+div.site-footer footer {
+  &:before {
+    background-image: url(bottom.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    bottom: 100%;
+    content: "";
+    height: 200px;
+    position: absolute;
+    width: 100%;
+    transform: rotate(180deg);
+    z-index: -1;
+  }
 }
 
 /* Quotes

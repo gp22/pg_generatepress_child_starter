@@ -15,7 +15,7 @@ if ( 'full-width' !== generate_get_option( 'footer_inner_width' ) ) {
 	}
 }
 ?>
-<footer <?php generate_do_element_classes( 'site-info', 'site-info' ); ?>>
+<footer <?php generate_do_element_classes( 'site-info', 'bg-gray-100 relative pt-20' ); ?>>
 	<div class="inside-site-info<?php echo $inside_site_info_class; // phpcs:ignore ?>">
 
 		<?php generate_do_site_logo(); ?>
