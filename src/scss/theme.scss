@@ -2,7 +2,6 @@
 // Edit custom.scss to add/modify rules which are vendor related (eg. Generatepress)
 
 .btn-primary {
-
   background-color: #320ad8; // .bg-violet-500
   border: 0;
   color: white;
@@ -15,17 +14,14 @@
   text-transform: uppercase; // .uppercase
   transition: all ease-in-out 0.2s;
 
+  &:active,
+  &:focus,
   &:hover {
     background-color: #320ad8; // .bg-violet-500
     border: 0;
+    color: white;
     opacity: .5;
   }
-
-  &:focus,
-  &:visited {
-    color: white;
-  }
-
 }
 
 /* Front page
