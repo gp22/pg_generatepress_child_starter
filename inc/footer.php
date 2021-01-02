@@ -18,9 +18,9 @@ if ( 'full-width' !== generate_get_option( 'footer_inner_width' ) ) {
 <footer <?php generate_do_element_classes( 'site-info', 'bg-gray-100 relative pt-20' ); ?>>
 	<div class="inside-site-info<?php echo $inside_site_info_class; // phpcs:ignore ?>">
 
-		<?php generate_do_site_logo(); ?>
+		<?php //generate_do_site_logo(); ?>
 
-		<div class="text-sm mt-10">
+		<div class="text-sm">
 			<strong class="opacity-75">Paul Garcia</strong>
 			<p class="mb-0 opacity-75">
 				519 W 22nd St. Ste 100<br>
