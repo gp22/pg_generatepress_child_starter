@@ -9,11 +9,11 @@ import cleanCss from "gulp-clean-css";
 // import purgecss from "gulp-purgecss";
 // import purgecssWordpress from "purgecss-with-wordpress";
 import gulpif from "gulp-if";
-import named from "vinyl-named";
-// import imagemin from "gulp-imagemin";
+// import named from "vinyl-named";
+import imagemin from "gulp-imagemin";
 import del from "del";
-import webpack from "webpack-stream";
-import uglify from "gulp-uglify";
+// import webpack from "webpack-stream";
+// import uglify from "gulp-uglify";
 // import browserSync from "browser-sync";
 
 // let server = browserSync.create();
@@ -26,10 +26,10 @@ let paths = {
 		src: ["src/scss/style.scss" /* "src/scss/admin.scss" */],
 		dest: "build/css",
 	},
-	// images: {
-	// 	src: "src/img/**/*.{jpg,jpeg,png,svg,gif}",
-	// 	dest: "public/img",
-	// },
+	images: {
+		src: "src/img/**/*.{jpg,jpeg,png,svg,gif}",
+		dest: "build/img",
+	},
 	// scripts: {
 	//   src: ["src/js/index.js" /* "src/js/admin.js" */],
 	//   dest: "build/js",
@@ -97,12 +97,12 @@ export let styles = (done) => {
 	// .pipe(server.stream());
 };
 
-// export let images = () => {
-// 	return gulp
-// 		.src(paths.images.src)
-// 		.pipe(gulpif(PROD, imagemin()))
-// 		.pipe(gulp.dest(paths.images.dest));
-// };
+export let images = () => {
+	return gulp
+		.src(paths.images.src)
+		.pipe(gulpif(PROD, imagemin()))
+		.pipe(gulp.dest(paths.images.dest));
+};
 
 // export let copy = () => {
 // 	return gulp.src(paths.other.src).pipe(gulp.dest(paths.other.dest));
@@ -114,6 +114,7 @@ export let watch = (done) => {
 	// gulp.watch("src/js/**/*.js", gulp.series(scripts, reload));
 	// gulp.watch("**/*.php", reload);
 	// gulp.watch(paths.images.src, gulp.series(images, reload));
+	gulp.watch(paths.images.src, images);
 	// gulp.watch(paths.other.src, gulp.series(copy, reload));
 	done();
 };
@@ -150,7 +151,7 @@ export let watch = (done) => {
 export let dev = gulp.series(
 	clean,
 	// gulp.parallel(styles, scripts, images, copy),
-	gulp.parallel(styles),
+	gulp.parallel(styles, images),
 	// styles,
 	// serve,
 	watch
@@ -159,7 +160,7 @@ export let dev = gulp.series(
 export let build = gulp.series(
 	clean,
 	// gulp.parallel(styles, scripts, images, copy)
-	gulp.parallel(styles)
+	gulp.parallel(styles, images)
 );
 
 // export let build = gulp.series(styles);
