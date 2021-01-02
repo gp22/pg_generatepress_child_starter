@@ -3,8 +3,23 @@
 
 /* Links
 --------------------------------------------- */
-a {
-  text-decoration: underline;
+.site-content a:not(.btn-primary),
+.site-footer a:not([rel=home]) {
+  color: #026E92;
+  background: -webkit-linear-gradient(left, #026E92, #10A7D9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+
+  &:after {
+    left: 0;
+    position: absolute;
+    bottom: -0.1em;
+    content: '';
+    background: linear-gradient(to right, #026E92, #10A7D9);
+    height: .1em;
+    width: 100%;
+  }
 }
 
 /* Lists

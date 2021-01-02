@@ -1,0 +1,16 @@
+// should match the breakpoints in tailwind.config.js
+
+$md: "769px";
+$lg: "1025px";
+
+@mixin md() {
+  @media only screen and (min-width: $md) {
+      @content;
+  }
+}
+
+@mixin lg() {
+  @media only screen and (min-width: $lg) {
+      @content;
+  }
+}

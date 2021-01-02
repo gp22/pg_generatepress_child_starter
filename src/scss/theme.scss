@@ -1,6 +1,8 @@
 // Your custom theme & WordPress related CSS rules go here
 // Edit custom.scss to add/modify rules which are vendor related (eg. Generatepress)
 
+@import "mixins";
+
 .btn-primary {
   background-color: #320ad8; // .bg-violet-500
   border: 0;
@@ -28,14 +30,18 @@
 --------------------------------------------- */
 header.site-header {
   &:after {
-    background-image: url(top.svg);
+    background-image: url(../img/top.svg);
     background-repeat: no-repeat;
     background-size: cover;
     content: "";
-    height: 200px;
+    height: 60px;
     position: absolute;
     width: 100%;
     z-index: -1;
+
+    @include md {
+      height: 200px;
+    }
   }
 }
 
@@ -53,16 +59,20 @@ header.site-header {
 --------------------------------------------- */
 div.site-footer footer {
   &:before {
-    background-image: url(bottom.svg);
+    background-image: url(../img/bottom.svg);
     background-repeat: no-repeat;
     background-size: cover;
     bottom: 100%;
     content: "";
-    height: 200px;
+    height: 60px;
     position: absolute;
     width: 100%;
     transform: rotate(180deg);
     z-index: -1;
+
+    @include md {
+      height: 120px;
+    }
   }
 }
 
