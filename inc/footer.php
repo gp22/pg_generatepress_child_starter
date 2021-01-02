@@ -36,9 +36,15 @@ if ( 'full-width' !== generate_get_option( 'footer_inner_width' ) ) {
 
 			<div class="flex flex-auto justify-center mt-4 md:mt-0 md:justify-end">
 
-				<a href="/privacy-policy" class="pr-3 border border-solid border-gray-200 border-b-0 border-t-0 border-l-0">Privacy</a>
-				<a href="/terms-of-service" class="px-3 border border-solid border-gray-200 border-b-0 border-t-0 border-l-0">Terms</a>
-				<a href="/accessibility-statement" class="pl-3">Accessibility</a>
+				<span class="pr-3 border border-solid border-gray-200 border-b-0 border-t-0 border-l-0">
+					<a href="/privacy-policy">Privacy</a>
+				</span>
+				<span class="px-3 border border-solid border-gray-200 border-b-0 border-t-0 border-l-0">
+					<a href="/terms-of-service">Terms</a>
+				</span>
+				<span class="pl-3">
+					<a href="/accessibility-statement">Accessibility</a>
+				</span>
 
 			</div>
 		</div>
