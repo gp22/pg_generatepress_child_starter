@@ -20,11 +20,21 @@ if ( 'full-width' !== generate_get_option( 'footer_inner_width' ) ) {
 
 		<?php generate_do_site_logo(); ?>
 
-		<div class="flex flex-col text-sm w-full md:flex-row">
+		<div class="text-sm mt-10">
+			<strong class="opacity-75">Paul Garcia</strong>
+			<p class="mb-0 opacity-75">
+				519 W 22nd St. Ste 100<br>
+				#93183<br>
+				Sioux Falls, SD 57105<br>
+			</p>
+			<a href="mailto:hello@paulgarcia.co">hello@paulgarcia.co</a>
+		</div>
 
-			<div class="copyright opacity-50">©<?php echo date("Y"); ?> paulgarcia.co</div>
+		<div class="flex flex-col mt-10 pt-6 text-sm w-full border border-b-0 border-gray-200 border-l-0 border-r-0 border-solid md:flex-row">
 
-			<div class="flex flex-auto justify-center md:justify-end">
+			<div class="copyright text-center opacity-50">©<?php echo date("Y"); ?> paulgarcia.co</div>
+
+			<div class="flex flex-auto justify-center mt-4 md:mt-0 md:justify-end">
 
 				<a href="/privacy-policy" class="pr-3 border border-solid border-gray-200 border-b-0 border-t-0 border-l-0">Privacy</a>
 				<a href="/terms-of-service" class="px-3 border border-solid border-gray-200 border-b-0 border-t-0 border-l-0">Terms</a>
