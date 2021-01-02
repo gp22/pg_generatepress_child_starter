@@ -31,7 +31,7 @@ add_filter( 'generate_load_child_theme_stylesheet', function() {
  */
 add_filter( 'generate_menu_class', function( $classes ) {
 
-	return array_merge( $classes, array( 'tracking-wider' ) );
+	return array_merge( $classes, array( 'tracking-wider', 'text-sm' ) );
 
 } );
 
