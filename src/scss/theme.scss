@@ -4,7 +4,7 @@
 @import "mixins";
 
 .btn-primary {
-  background-color: #320ad8; // .bg-violet-500
+  background: linear-gradient(to right, #320ad8, #6A4DDF);
   border: 0;
   color: white;
   display: inline-block;
@@ -19,7 +19,7 @@
   &:active,
   &:focus,
   &:hover {
-    background-color: #320ad8; // .bg-violet-500
+    background: linear-gradient(to right, #320ad8, #6A4DDF);
     border: 0;
     color: white;
     opacity: .5;
