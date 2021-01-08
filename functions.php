@@ -17,7 +17,7 @@ add_filter( 'generate_load_child_theme_stylesheet', '__return_false' );
 add_filter( 'generate_load_child_theme_stylesheet', function() {
 
 	wp_enqueue_style(
-		'generate-child',
+		'paulgarcia_co-generated-stylesheet',
 		get_stylesheet_directory_uri() . '/build/css/style.css',
 		false,
 		filemtime( get_stylesheet_directory() . '/build/css/style.css' ),
