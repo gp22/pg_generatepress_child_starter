@@ -3,6 +3,32 @@
 
 @import "mixins";
 
+// Font sizes. Should match sizes in tailwind.config.js
+$text-sm: .833rem;
+
+/* Lists
+--------------------------------------------- */
+ul {
+  list-style: none;
+
+  &:not(#menu-primary) li {
+    position: relative;
+
+    &:before {
+      background-image: url(../img/check-solid.svg);
+      background-repeat: no-repeat;
+      content: "";
+      height: $text-sm;
+      left: -1.2em;
+      opacity: .5;
+      position: absolute;
+      top: .25em;
+      width: $text-sm;
+      z-index: 1;
+    }
+  }
+}
+
 .btn-primary {
   background: linear-gradient(to right, #320ad8, #6A4DDF);
   border: 0;
