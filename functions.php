@@ -7,6 +7,15 @@
  */
 
 /**
+ * Add code to head
+ */
+add_action( 'wp_head', function() {
+
+	include( get_stylesheet_directory() . '/inc/head.php' );
+
+} );
+
+/**
  * Disable loading child theme stylesheet
  */
 add_filter( 'generate_load_child_theme_stylesheet', '__return_false' );
