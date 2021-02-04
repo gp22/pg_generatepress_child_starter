@@ -97,11 +97,12 @@ export let styles = (done) => {
 	// .pipe(server.stream());
 };
 
-export let images = () => {
-	return gulp
+export let images = (done) => {
+	gulp
 		.src(paths.images.src)
 		.pipe(gulpif(PROD, imagemin()))
 		.pipe(gulp.dest(paths.images.dest));
+	done();
 };
 
 // export let copy = () => {
